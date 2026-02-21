@@ -115,6 +115,8 @@ img {
 }
 
 .hero-title {
+    display: none;
+    /* Hidden because it's in the new hero image */
     font-size: 2.8rem;
     line-height: 1.4;
     margin-bottom: 20px;
@@ -123,31 +125,27 @@ img {
 }
 
 .hero-subtitle {
+    display: none;
+    /* Hidden because it's in the new hero image */
     font-size: 1.2rem;
     color: var(--text-light);
     margin-bottom: 40px;
 }
 
-.hero-image-placeholder {
+.hero-image {
     width: 100%;
     max-width: 800px;
-    height: 400px;
-    /* Taller hero image */
-    background-color: #F8F8F8;
-    background-image:
-        linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
-        linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
     margin: 0 auto 50px;
-    color: #aaa;
-    font-weight: 700;
+    border-radius: 20px;
+    overflow: hidden;
     border: 8px solid var(--white);
     box-shadow: var(--shadow-soft);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Buttons */
@@ -248,15 +246,14 @@ img {
 
 .content-number {
     position: absolute;
-    top: -15px;
-    left: -5px;
-    font-size: 6rem;
+    top: -10px;
+    left: 10px;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--primary-color);
-    opacity: 0.08;
+    opacity: 0.12;
     line-height: 1;
-    font-family: sans-serif;
-    /* Use standard font for number for cleaner look */
+    font-family: inherit;
 }
 
 .content-details {
@@ -310,6 +307,126 @@ img {
 .details-row dd {
     width: 75%;
     font-weight: 500;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.map-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Speakers */
+.speakers {
+    background: transparent;
+}
+
+.speaker-card {
+    display: flex;
+    gap: 40px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-card);
+    align-items: flex-start;
+}
+
+.speaker-image {
+    flex: 0 0 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-info h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.speaker-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.speaker-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* FAQ */
+.faq {
+    background-color: var(--white);
+    border-radius: 30px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1000px;
+    box-shadow: var(--shadow-card);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.faq-question::before {
+    content: 'Q.';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.faq-answer::before {
+    content: 'A.';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: var(--text-light);
 }
 
 /* CTA Footer */
@@ -392,5 +509,18 @@ img {
 
     .cta-title {
         font-size: 1.5rem;
+    }
+
+    .speaker-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .speaker-image {
+        flex: 0 0 150px;
+        height: 150px;
     }
 }
