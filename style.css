@@ -580,23 +580,40 @@ img {
 
 .message-content {
     display: flex;
-    gap: 50px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
 }
 
 .message-image {
-    flex: 0 0 300px;
+    max-width: 400px;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-card);
     border: 5px solid var(--white);
+    text-align: center;
+}
+
+.message-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.signature {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 .message-text {
-    flex: 1;
+    width: 100%;
     font-size: 1.05rem;
     line-height: 2;
 }
+
 
 .message-text p {
     margin-bottom: 20px;
