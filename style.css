@@ -524,3 +524,147 @@ img {
         height: 150px;
     }
 }
+
+/* Message Section */
+.message {
+    background: linear-gradient(180deg, transparent 0%, #FFF5F6 100%);
+}
+
+.message-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.message-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.message-subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.message-quote {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.message-quote::before,
+.message-quote::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+}
+
+.message-quote::before {
+    left: 0;
+}
+
+.message-quote::after {
+    right: 0;
+}
+
+.message-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.message-image {
+    flex: 0 0 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 5px solid var(--white);
+}
+
+.message-text {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+.message-text p {
+    margin-bottom: 20px;
+}
+
+.three-zeros {
+    list-style: none;
+    background: #FFF9F9;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border-left: 5px solid var(--primary-color);
+}
+
+.three-zeros li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.three-zeros li::before {
+    content: '●';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+.three-zeros li:last-child {
+    margin-bottom: 0;
+}
+
+.three-zeros strong {
+    color: var(--primary-color);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Mobile Responsive Adjustments for Message Section */
+@media (max-width: 768px) {
+    .message-card {
+        padding: 40px 20px;
+    }
+
+    .message-quote {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .message-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .message-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .message-text {
+        text-align: left;
+    }
+
+    .three-zeros {
+        padding: 20px;
+    }
+}
