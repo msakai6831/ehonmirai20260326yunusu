@@ -521,6 +521,7 @@ img {
 
     .speaker-image {
         flex: 0 0 150px;
+        width: 150px;
         height: 150px;
     }
 }
