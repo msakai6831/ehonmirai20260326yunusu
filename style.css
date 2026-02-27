@@ -686,6 +686,7 @@ img {
         padding: 20px;
     }
 }
+
 /* About Section Redesign */
 .about-container {
     display: flex;
@@ -702,16 +703,7 @@ img {
 }
 
 .about-title-wrapper h3 {
-    margin-bottom: 0;
-}
-
-.about-title-wrapper h3::after {
-    display: none; /* Removing the default underline for this version if needed */
-}
-
-.about-icon.small {
-    width: 60px;
-    height: auto;
+    margin-bottom: 30px;
 }
 
 .about-content {
@@ -721,50 +713,38 @@ img {
 
 .about-text {
     font-size: 1.15rem;
-    line-height: 1.8;
+    line-height: 2;
 }
 
 .about-photos {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
     margin-bottom: 40px;
 }
 
 .about-photo-item {
     flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
+    text-align: center;
 }
 
 .about-img {
     width: 100%;
-    height: 250px;
+    height: 350px;
     object-fit: cover;
-    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 10px;
 }
 
-.about-illustration {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 20px;
-}
-
-.about-illust {
-    width: 100%;
-    height: auto;
-    background-color: transparent;
+.photo-caption {
+    font-size: 0.8rem;
+    color: var(--text-light);
 }
 
 @media (max-width: 768px) {
     .about-photos {
         flex-direction: column;
-    }
-    .about-img {
-        height: 200px;
-    }
-    .about-icon.small {
-        width: 40px;
+        gap: 40px;
     }
 }
