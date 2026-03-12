@@ -685,6 +685,68 @@ img {
     .three-zeros {
         padding: 20px;
     }
+
+    .message-profile {
+        padding: 0 20px;
+    }
+}
+
+/* Message Profile Section Styles */
+.message-profile {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.profile-intro {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.message-profile p {
+    margin-bottom: 20px;
+}
+
+.profile-roles,
+.profile-books {
+    background: #FFFDE7;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.roles-title,
+.books-title {
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.profile-roles ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-roles li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.profile-roles li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.profile-roles li:last-child {
+    margin-bottom: 0;
 }
 
 /* About Section Redesign */
